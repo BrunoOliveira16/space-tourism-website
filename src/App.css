@@ -1,0 +1,101 @@
+/* ================================================= */
+/*                   GOOGLE FONTS                    */
+/* ================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+
+
+/* ================================================= */
+/*                    VARIAVEIS CSS                  */
+/* ================================================= */
+
+:root {
+    /* ===================== Cores ===================== */
+    --bg-primary-color: #0B0D17;
+    --text-primary-color: #D0D6F9;
+    --text-second-color: #FFFFFF;
+
+    /* =================== Tipografia ================== */
+    --primary-font-family: 'Bellefair', serif;
+    --second-font-family: 'Barlow Condensed', sans-serif;
+
+    --biggest-font-size: 9.375rem;
+    --largest-font-size: 6.25rem;
+    --larger-font-size: 3.5rem;
+    --large-font-size: 2rem;
+    --normal-font-size: 1.75rem;
+    --small-font-size: 1.125rem;
+    --smaller-font-size: 1rem;
+    --tiny-font-size: .875rem;
+
+    --big-letter-space: 4.75px;
+    --medium-letter-space: 2.7px;
+    --normal-letter-space: 2.35px;
+
+    --small-line-height: 2rem;
+
+    /* ================== Transições ================== */
+    --transition: cubic-bezier(0.3, 0, 0.3, 1);
+}
+
+
+/* ================================================= */
+/*                    RESET CSS                      */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary-color);
+    min-width: 360px;
+}
+
+p {
+    font-family: var(--second-font-family);
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
+    color: var(--text-primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-second-color);
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ================================================= */
+/*           CLASSES CSS REUTILIZÁVEIS               */
+/* ================================================= */
+
+.btn-circle {
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid var(--text-second-color);
+    border-radius: 50%;
+    opacity: 0.25;
+    transition: all .8s var(--transition);
+}
+
+.btn-circle:hover {
+    background-color: var(--text-second-color);
+    opacity: 1;
+    color: var(--bg-primary-color);
+}
