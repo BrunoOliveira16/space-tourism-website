@@ -1,0 +1,143 @@
+.home {
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    gap: 5rem;
+    background: url(../../assets/home/background-home-mobile.jpg) no-repeat center center scroll;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.home__content {
+    max-width: 327px;
+    margin-block: 3rem 5rem;
+    gap: 1rem;
+}
+
+.home__title {
+    font-size: var(--big-font-size);
+    text-transform: uppercase;
+}
+
+.home__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-primary-color);
+    letter-spacing: var(--medium-letter-space);
+}
+
+.home__text {
+    font-size: var(--smaller-font-size);
+    line-height: var(--smaller-line-height);
+    letter-spacing: var(--smaller-letter-space);
+}
+
+.home__title,
+.home__subtitle,
+.home__text {
+    text-align: center;
+    font-weight: 400;
+}
+
+.home__button {
+    width: 9.375rem;
+    height: 9.375rem;
+    outline: none;
+    border-radius: 50%;
+    background-color: var(--text-second-color);
+
+    font-size: var(--medium-font-size);
+    letter-spacing: var(--small-letter-space);
+    color: var(--bg-primary-color);
+    transition: all .5s ease-in-out;
+}
+
+.home__button:hover {
+    outline: 50px solid var(--outline-second-color);
+    border-radius: 50%;
+    outline-offset: 0.1;
+}
+
+@media screen and (min-width: 580px) {
+    .home {
+        background: url(../../assets/home/background-home-tablet.jpg) center center / cover no-repeat;
+    }
+
+    .home__content {
+        max-width: 450px;
+        gap: 1.5rem;
+    }
+
+    .home__title {
+        font-size: var(--biggest-font-size);
+    }
+
+    .home__subtitle {
+        font-size: var(--medium-font-size);
+        letter-spacing: var(--medium-letter-space);
+    }
+
+    .home__text {
+        font-size: var(--small-font-size);
+        line-height: var(--small-line-height);
+        letter-spacing: var(--small-letter-space);
+    }
+
+    .home__button {
+        width: 15.125rem;
+        height: 15.125rem;
+        font-size: var(--larger-font-size);
+        letter-spacing: var(--normal-letter-space);
+    }
+}
+
+@media screen and (min-width: 913px) {
+    .home {
+        background: url(../../assets/home/background-home-desktop.jpg) center center / cover no-repeat;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: end;
+
+        padding-inline: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .home__content {
+        margin: 0;
+    }
+
+    .home__subtitle {
+        width: 100%;
+    }
+
+    .home__subtitle, .home__text {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1178px) {
+    .home {
+        height: 100vh;
+        padding-inline: 10.35rem;
+        padding-bottom: 8.1875rem;
+    }
+
+    .home__subtitle {
+        
+        font-size: var(--large-font-size);
+        letter-spacing: var(--large-letter-space);
+    }
+
+    .home__text {
+        font-size: var(--normal-font-size);
+        line-height: var(--normal-line-height);
+    }
+
+    .home__button {
+        width: 17.125rem;
+        height: 17.125rem;
+    }
+
+    .home__button:hover {
+        outline: 88px solid var(--outline-second-color);
+    }
+}

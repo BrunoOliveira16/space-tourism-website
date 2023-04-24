@@ -14,25 +14,33 @@
     --bg-primary-color: #0B0D17;
     --text-primary-color: #D0D6F9;
     --text-second-color: #FFFFFF;
+    --outline-second-color: hsl(0, 0%, 10%);
 
     /* =================== Tipografia ================== */
     --primary-font-family: 'Bellefair', serif;
     --second-font-family: 'Barlow Condensed', sans-serif;
 
     --biggest-font-size: 9.375rem;
-    --largest-font-size: 6.25rem;
-    --larger-font-size: 3.5rem;
-    --large-font-size: 2rem;
-    --normal-font-size: 1.75rem;
-    --small-font-size: 1.125rem;
-    --smaller-font-size: 1rem;
+    --bigger-font-size: 6.25rem;
+    --big-font-size: 5rem;
+    --largerst-font-size: 3.5rem;
+    --larger-font-size: 2rem;
+    --large-font-size: 1.75rem;
+    --medium-font-size: 1.25rem;
+    --normal-font-size: 1.125rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: .9375rem;
     --tiny-font-size: .875rem;
 
-    --big-letter-space: 4.75px;
+    --large-letter-space: 4.725px;
     --medium-letter-space: 2.7px;
-    --normal-letter-space: 2.35px;
+    --normal-letter-space: 2px;
+    --small-letter-space: 1.35px;
+    --smaller-letter-space: 1.15px;
 
-    --small-line-height: 2rem;
+    --normal-line-height: 2rem;
+    --small-line-height: 1.75rem;
+    --smaller-line-height: 1.56rem;
 
     /* ================== Transições ================== */
     --transition: cubic-bezier(0.3, 0, 0.3, 1);
@@ -54,11 +62,24 @@ body {
     min-width: 360px;
 }
 
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: var(--primary-font-family);
+    color: var(--text-second-color);
+}
+
 p {
-    font-family: var(--second-font-family);
     font-size: var(--small-font-size);
     line-height: var(--small-line-height);
     color: var(--text-primary-color);
+}
+
+p, h2 {
+    font-family: var(--second-font-family);
 }
 
 a {
@@ -72,6 +93,9 @@ li {
 
 button {
     cursor: pointer;
+    font-family: var(--primary-font-family);
+    text-align: center;
+    border: none;
 }
 
 img {
@@ -82,6 +106,13 @@ img {
 /* ================================================= */
 /*           CLASSES CSS REUTILIZÁVEIS               */
 /* ================================================= */
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .btn-circle {
     width: 5rem;
