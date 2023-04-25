@@ -57,6 +57,7 @@
 
 @media screen and (min-width: 580px) {
     .home {
+        height: auto;
         background: url(../../assets/home/background-home-tablet.jpg) center center / cover no-repeat;
         background-attachment: fixed;
     }
@@ -64,6 +65,7 @@
     .home__content {
         max-width: 450px;
         gap: 1.5rem;
+        margin-top: 12.625rem;
     }
 
     .home__title {
@@ -91,6 +93,7 @@
 
 @media screen and (min-width: 913px) {
     .home {
+        height: 100%;
         background: url(../../assets/home/background-home-desktop.jpg) center center / cover no-repeat;
         background-attachment: fixed;
         flex-direction: row;
