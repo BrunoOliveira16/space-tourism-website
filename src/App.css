@@ -15,7 +15,8 @@
     --bg-nav-color: rgba(255, 255, 255, 0.04);
     --text-primary-color: #D0D6F9;
     --text-second-color: #FFFFFF;
-    --outline-second-color: hsl(0, 0%, 10%);
+    --outline-primary-color: rgba(255, 255, 255, 0.5);
+    --shadow-primary-color: rgba(255, 255, 255, 0.1);
 
     /* =================== Tipografia ================== */
     --primary-font-family: 'Bellefair', serif;
@@ -61,11 +62,13 @@
 body {
     background-color: var(--bg-primary-color);
     min-width: 360px;
+    margin: auto;
 }
 
 .main {
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
 h1 {

@@ -1,13 +1,10 @@
-.main {
-    background: url(../../assets/home/background-home-mobile.jpg) no-repeat center center scroll;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 .home {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 1.5rem;
+
+    background: url(../../assets/home/background-home-mobile.jpg) center center / cover no-repeat;
+    background-attachment: fixed;
 }
 
 .home__content {
@@ -54,14 +51,14 @@
 }
 
 .home__button:hover {
-    outline: 50px solid var(--outline-second-color);
-    border-radius: 50%;
+    box-shadow: 0 0 5px 55px var(--shadow-primary-color);
     transition: all .5s var(--transition);
 }
 
 @media screen and (min-width: 580px) {
-    .main {
+    .home {
         background: url(../../assets/home/background-home-tablet.jpg) center center / cover no-repeat;
+        background-attachment: fixed;
     }
 
     .home__content {
@@ -93,18 +90,14 @@
 }
 
 @media screen and (min-width: 913px) {
-    .main {
-        background: url(../../assets/home/background-home-desktop.jpg) center center / cover no-repeat;
-    }
-    
     .home {
-        height: 100%;
+        background: url(../../assets/home/background-home-desktop.jpg) center center / cover no-repeat;
+        background-attachment: fixed;
         flex-direction: row;
         justify-content: space-between;
         align-items: end;
-
         padding-inline: 3.5rem;
-        padding-bottom: 3.5rem;
+        padding-bottom: 3rem;
     }
 
     .home__content {
@@ -123,11 +116,10 @@
 @media screen and (min-width: 1178px) {
     .home {
         padding-inline: 10.35rem;
-        padding-bottom: 8.1875rem;
+        padding-bottom: 8rem;
     }
 
     .home__subtitle {
-        
         font-size: var(--large-font-size);
         letter-spacing: var(--large-letter-space);
     }
@@ -143,6 +135,6 @@
     }
 
     .home__button:hover {
-        outline: 88px solid var(--outline-second-color);
+        box-shadow: 0 0 5px 88px var(--shadow-primary-color);
     }
 }

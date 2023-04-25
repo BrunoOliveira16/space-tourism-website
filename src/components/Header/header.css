@@ -1,4 +1,4 @@
-header {
+.header {
     width: 100%;
     padding: 1.5rem;
     position: fixed;
@@ -13,6 +13,10 @@ header {
 .header__logo {
     width: 2.5rem;
     height: 2.5rem;
+}
+
+.header__line {
+    display: none;
 }
 
 .nav__menu {
@@ -57,3 +61,91 @@ header {
     margin-right: 11px;
 }
 
+@media screen and (min-width: 580px) {
+    .header {
+        padding-right: 0;
+    }
+
+    .header__logo {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .nav__toggle--buttons {
+        display: none;
+    }
+
+    .nav__menu {
+        max-width: 450px;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .nav__list {
+        height: 6rem;
+        margin: 0;
+        padding: 0 2.875rem;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2.3125rem;
+    }
+
+    .nav__item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .nav__item span {
+        display: none;
+    }
+
+    .nav__item:hover::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--outline-primary-color);
+    }
+
+    .active::after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--text-second-color);
+    }
+}
+
+@media screen and (min-width: 913px) {
+    .nav__menu {
+        max-width: 830px;
+    }
+
+    .nav__list {
+        padding-inline: 7.69rem 10.31rem;
+    }
+
+    .nav__item span {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header__line {
+        height: 1px;
+        width: 50vw;
+        display: inline;
+        position: relative;
+        left: 5%;
+        background-color: var(--outline-primary-color);
+        z-index: 100;
+    }
+}

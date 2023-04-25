@@ -6,7 +6,7 @@ import Close from '../../assets/shared/icon-close.svg';
 import { links } from '../../data/data.json';
 
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     const [ showMenu, setShowMenu ] = useState(false);
@@ -14,6 +14,8 @@ const Header = () => {
     return (
         <header className='header'>
             <img src={Logo} alt="logo do site" className='header__logo' />
+
+            <span className='header__line'></span>
 
             <nav className="nav">
                 <div className='nav__toggle--buttons' onClick={()=> setShowMenu(!showMenu)}>
@@ -26,7 +28,7 @@ const Header = () => {
                             return (
                                 <li className='nav__item' key={index}>
                                     <span>{position}</span>
-                                    <Link to={path}>{name}</Link>
+                                    <NavLink to={path}>{name}</NavLink>
                                 </li>
                             )
                         })}
