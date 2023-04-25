@@ -1,16 +1,18 @@
-.home {
-    width: 100%;
-    height: 100vh;
-    padding: 1.5rem;
-    gap: 5rem;
+.main {
     background: url(../../assets/home/background-home-mobile.jpg) no-repeat center center scroll;
     background-attachment: fixed;
     background-size: cover;
 }
 
+.home {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+}
+
 .home__content {
     max-width: 327px;
-    margin-block: 3rem 5rem;
+    margin-block: 5rem 5rem;
     gap: 1rem;
 }
 
@@ -48,17 +50,17 @@
     font-size: var(--medium-font-size);
     letter-spacing: var(--small-letter-space);
     color: var(--bg-primary-color);
-    transition: all .5s ease-in-out;
+    transition: all .5s var(--transition);
 }
 
 .home__button:hover {
     outline: 50px solid var(--outline-second-color);
     border-radius: 50%;
-    outline-offset: 0.1;
+    transition: all .5s var(--transition);
 }
 
 @media screen and (min-width: 580px) {
-    .home {
+    .main {
         background: url(../../assets/home/background-home-tablet.jpg) center center / cover no-repeat;
     }
 
@@ -91,8 +93,12 @@
 }
 
 @media screen and (min-width: 913px) {
-    .home {
+    .main {
         background: url(../../assets/home/background-home-desktop.jpg) center center / cover no-repeat;
+    }
+    
+    .home {
+        height: 100%;
         flex-direction: row;
         justify-content: space-between;
         align-items: end;
@@ -116,7 +122,6 @@
 
 @media screen and (min-width: 1178px) {
     .home {
-        height: 100vh;
         padding-inline: 10.35rem;
         padding-bottom: 8.1875rem;
     }
