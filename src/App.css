@@ -17,6 +17,7 @@
     --text-second-color: #FFFFFF;
     --outline-primary-color: rgba(255, 255, 255, 0.5);
     --shadow-primary-color: rgba(255, 255, 255, 0.1);
+    --border-color: #383B4B;
 
     /* =================== Tipografia ================== */
     --primary-font-family: 'Bellefair', serif;
@@ -34,9 +35,12 @@
     --smaller-font-size: .9375rem;
     --tiny-font-size: .875rem;
 
-    --large-letter-space: 4.725px;
+    --larger-letter-space: 4.725px;
+    --large-letter-space: 3.375px;
     --medium-letter-space: 2.7px;
+    --medium-sm-letter-space: 2.3625px;
     --normal-letter-space: 2px;
+    --normal-sm-letter-space: 1.5px;
     --small-letter-space: 1.35px;
     --smaller-letter-space: 1.15px;
 
@@ -67,7 +71,7 @@ body {
 
 .main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: relative;
 }
 
@@ -114,7 +118,6 @@ img {
 .column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -123,6 +126,21 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+}
+
+.title {
+    font-family: var(--second-font-family);
+    font-size: var(--small-font-size);
+    font-weight: 400;
+    letter-spacing: var(--medium-letter-space);
+    color: var(--text-second-color);
+    text-transform: uppercase;
+}
+
+.title span {
+    font-weight: 700;
+    opacity: 0.25;
+    margin-right: 1.125rem;
 }
 
 .btn-circle {
@@ -140,4 +158,40 @@ img {
     background-color: var(--text-second-color);
     opacity: 1;
     color: var(--bg-primary-color);
+}
+
+
+/* ================================================= */
+/*    CLASSES CSS REUTILIZÁVEIS BRAKEPOINT 580px               */
+/* ================================================= */
+
+@media screen and (min-width: 580px) {
+    .main {
+        height: 100%;
+    }
+
+    .title {
+        font-size: var(--medium-font-size);
+        letter-spacing: var(--large-letter-space);
+        text-align: left;
+        width: 100%;
+    }
+}
+
+
+/* ================================================= */
+/*    CLASSES CSS REUTILIZÁVEIS BRAKEPOINT 913px               */
+/* ================================================= */
+
+@media screen and (min-width: 913px) {
+    .main {
+        height: 100vh;
+    }
+
+    .title {
+        font-size: var(--large-font-size);
+        letter-spacing: var(--larger-letter-space);
+        text-align: left;
+        width: 100%;
+    }
 }

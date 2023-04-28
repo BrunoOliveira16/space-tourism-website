@@ -1,17 +1,95 @@
 .destination {
     width: 100%;
     height: 100%;
+    padding-inline: 1.5rem;
+    padding-block: 5.5rem 3.625rem;
     background-image: url(../../assets/destination/background-destination-mobile.jpg);
+}
+
+.destination__title {
+    margin-bottom: 2rem;
+}
+
+.destination__image {
+    width: 170px;
+    height: 170px;
+}
+
+.destination__nav {
+    height: 1.75rem;
+    display: flex;
+    align-items: flex-start;
+    margin-block: 1.625rem 1.25rem;
+}
+
+.destination__list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6875rem;
+}
+
+.destination__item {
+    font-size: var(--smaller-font-size);
+    font-family: var(--second-font-family);
+    color: var(--text-second-color);
+    letter-spacing: var(--medium-sm-letter-space);
+    text-transform: uppercase;
+}
+
+.destination__subtitle {
+    font-size: var(--largerst-font-size);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.destination__description {
+    font-size: var(--smaller-font-size);
+    line-height: var(--smaller-line-height);
+    letter-spacing: var(--normal-sm-letter-space);
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.destination__info {
+    margin-top: 2rem;
+    gap: 0.75rem;
+}
+
+.destination__info--title {
+    font-size: var(--tiny-font-size);
+    letter-spacing: var(--medium-sm-letter-space);
+    text-transform: uppercase;
+}
+
+.destination__info--value {
+    font-size: var(--large-font-size);
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 580px) {
     .destination {
+        padding-top: 8.5rem;
         background-image: url(../../assets/destination/background-destination-tablet.jpg);
+    }
+
+    .destination__item {
+        font-size: var(--small-font-size);
+        letter-spacing: var(--medium-letter-space);
+    }
+
+    .destination__subtitle {
+        font-size: var(--big-font-size);
     }
 }
 
 @media screen and (min-width: 913px) {
     .destination {
         background-image: url(../../assets/destination/background-destination-desktop.jpg);
+    }
+
+    .destination__subtitle {
+        font-size: var(--bigger-font-size);
     }
 }
