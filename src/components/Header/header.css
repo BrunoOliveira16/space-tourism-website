@@ -1,10 +1,9 @@
 .header {
+    max-width: 1440px;
     width: 100%;
     padding: 1.5rem;
     position: fixed;
     top: 0;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background: transparent;
@@ -42,8 +41,7 @@
 }
 
 .nav__list {
-    display: flex;
-    flex-direction: column;
+    align-items: flex-start;
     gap: 2rem;
     margin-top: 7.375rem;
     padding-left: 2rem;
@@ -125,6 +123,10 @@
 }
 
 @media screen and (min-width: 913px) {
+    .header {
+        padding-left: 3.4375rem;
+    }
+
     .nav__menu {
         max-width: 830px;
     }

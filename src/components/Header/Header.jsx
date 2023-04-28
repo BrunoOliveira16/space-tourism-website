@@ -12,7 +12,7 @@ const Header = () => {
     const [ showMenu, setShowMenu ] = useState(false);
 
     return (
-        <header className='header'>
+        <header className='header row'>
             <img src={Logo} alt="logo do site" className='header__logo' />
 
             <span className='header__line'></span>
@@ -23,7 +23,7 @@ const Header = () => {
                 </div>
 
                 <div className={showMenu ? "nav__menu show-menu" : "nav__menu"}>
-                    <ul className="nav__list">
+                    <ul className="nav__list column">
                         {links.map(({name, path, position}, index) => {
                             return (
                                 <li className='nav__item' key={index}>

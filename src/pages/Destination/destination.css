@@ -17,14 +17,11 @@
 
 .destination__nav {
     height: 1.75rem;
-    display: flex;
     align-items: flex-start;
     margin-block: 1.625rem 1.25rem;
 }
 
 .destination__list {
-    display: flex;
-    flex-direction: row;
     gap: 1.6875rem;
 }
 
@@ -33,13 +30,12 @@
     font-family: var(--second-font-family);
     color: var(--text-second-color);
     letter-spacing: var(--medium-sm-letter-space);
-    text-transform: uppercase;
 }
 
 .destination__subtitle {
     font-size: var(--largerst-font-size);
     font-weight: 400;
-    text-transform: uppercase;
+    text-align: center;
 }
 
 .destination__description {
@@ -59,19 +55,35 @@
 .destination__info--title {
     font-size: var(--tiny-font-size);
     letter-spacing: var(--medium-sm-letter-space);
-    text-transform: uppercase;
 }
 
 .destination__info--value {
     font-size: var(--large-font-size);
     font-weight: 400;
+}
+
+.destination__item,
+.destination__subtitle,
+.destination__info--title,
+.destination__info--value {
     text-transform: uppercase;
 }
 
 @media screen and (min-width: 580px) {
     .destination {
-        padding-top: 8.5rem;
+        padding-inline: 2.4375rem;
+        padding-block: 8.5rem 3.875rem;
         background-image: url(../../assets/destination/background-destination-tablet.jpg);
+    }
+
+    .destination__title {
+        margin-block: 2.5rem 3.75rem;
+    }
+
+    .destination__image {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 3.3125rem;
     }
 
     .destination__item {
@@ -81,15 +93,69 @@
 
     .destination__subtitle {
         font-size: var(--big-font-size);
+        margin-bottom: 8px;
+    }
+
+    .destination__description {
+        width: 573px;
+        font-size: var(--small-font-size);
+        line-height: var(--small-line-height);
+        padding-bottom: 3rem;
+    }
+
+    .destination__box-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .destination__info {
+        width: 216px;
     }
 }
 
 @media screen and (min-width: 913px) {
     .destination {
+        height: 100%;
         background-image: url(../../assets/destination/background-destination-desktop.jpg);
+        justify-content: center;
+        padding-inline: 3.4375rem;
+        padding-bottom: 7.375rem;
     }
 
     .destination__subtitle {
         font-size: var(--bigger-font-size);
+    }
+
+    .destination__image, .destination__content {
+        width: 45%;
+    }
+
+    .destination__content {
+        max-width: 445px;
+        align-items: flex-start;
+    }
+
+    .destination__image {
+        height: auto;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .destination .wrapper {
+        gap: 5rem;
+    }
+
+    .destination__description {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1320px) {
+    .destination__title {
+        padding-left: 8rem;
     }
 }
