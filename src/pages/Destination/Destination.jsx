@@ -2,9 +2,9 @@ import './destination.css';
 
 const Destination = () => {
   return (
-    <div>
-      Em Construção
-    </div>
+    <section className="destination column bg">
+
+    </section>
   );
 };
 

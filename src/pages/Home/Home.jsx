@@ -2,7 +2,7 @@ import './home.css';
 
 const Home = () => {
   return (
-    <section className='home column'>
+    <section className='home column bg'>
         <div className="home__content column">
           <h2 className='home__subtitle'>SO, YOU WANT TO TRAVEL TO</h2>
           <h1 className='home__title'>Space</h1>

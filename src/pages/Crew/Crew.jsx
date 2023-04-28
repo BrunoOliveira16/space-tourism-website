@@ -2,7 +2,9 @@ import './crew.css'
 
 const Crew = () => {
   return (
-    <div>Em Construção</div>
+    <section className="crew column bg">
+      
+    </section>
   )
 }
 

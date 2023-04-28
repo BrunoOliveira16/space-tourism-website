@@ -118,6 +118,13 @@ img {
     align-items: center;
 }
 
+.bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 .btn-circle {
     width: 5rem;
     height: 5rem;

@@ -2,7 +2,9 @@ import './technology.css';
 
 const Technology = () => {
   return (
-    <div>Em construção</div>
+    <section className="technology column bg">
+      
+    </section>
   );
 };
 
