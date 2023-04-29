@@ -3,7 +3,7 @@
     height: 100vh;
     padding-inline: 1.5rem;
     padding-block: 7rem 3rem;
-    background-image: url(../../assets/home/background-home-mobile.jpg);
+    background-image: url(/assets/home/background-home-mobile.jpg);
 }
 
 .home__content {
@@ -57,7 +57,7 @@
 @media screen and (min-width: 580px) {
     .home {
         height: 100%;
-        background-image: url(../../assets/home/background-home-tablet.jpg);
+        background-image: url(/assets/home/background-home-tablet.jpg);
     }
 
     .home__content {
@@ -91,8 +91,8 @@
 
 @media screen and (min-width: 913px) {
     .home {
-        height: 100%;
-        background-image: url(../../assets/home/background-home-desktop.jpg);
+        height: 100vh;
+        background-image: url(/assets/home/background-home-desktop.jpg);
         flex-direction: row;
         justify-content: space-between;
         align-items: end;
@@ -115,7 +115,6 @@
 
 @media screen and (min-width: 1178px) {
     .home {
-        height: 100vh;
         padding-inline: 10.35rem;
         padding-bottom: 8.1875rem;
     }

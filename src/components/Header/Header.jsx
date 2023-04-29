@@ -1,8 +1,8 @@
 //Styles e Assets
 import './header.css';
-import Logo from '../../assets/shared/logo.svg';
-import Menu from '../../assets/shared/icon-hamburger.svg';
-import Close from '../../assets/shared/icon-close.svg';
+import Logo from '/assets/shared/logo.svg';
+import Menu from '/assets/shared/icon-hamburger.svg';
+import Close from '/assets/shared/icon-close.svg';
 import { links } from '../../data/data.json';
 
 import { useState } from 'react';
