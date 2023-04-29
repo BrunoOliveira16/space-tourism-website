@@ -3,7 +3,8 @@
     height: 100%;
     padding-inline: 1.5rem;
     padding-block: 5.5rem 3.625rem;
-    background-image: url(../../assets/destination/background-destination-mobile.jpg);
+    background-image: url(/assets/destination/background-destination-mobile.jpg);
+
 }
 
 .destination__title {
@@ -30,6 +31,8 @@
     font-family: var(--second-font-family);
     color: var(--text-second-color);
     letter-spacing: var(--medium-sm-letter-space);
+    background-color: transparent;
+    border: none;
 }
 
 .destination__subtitle {
@@ -73,7 +76,8 @@
     .destination {
         padding-inline: 2.4375rem;
         padding-block: 8.5rem 3.875rem;
-        background-image: url(../../assets/destination/background-destination-tablet.jpg);
+        background-image: url(/assets/destination/background-destination-tablet.jpg);
+
     }
 
     .destination__title {
@@ -118,7 +122,7 @@
 @media screen and (min-width: 913px) {
     .destination {
         height: 100%;
-        background-image: url(../../assets/destination/background-destination-desktop.jpg);
+        background-image: url(/assets/destination/background-destination-desktop.jpg);
         justify-content: center;
         padding-inline: 3.4375rem;
         padding-bottom: 7.375rem;
