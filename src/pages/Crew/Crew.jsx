@@ -15,7 +15,7 @@ const Crew = () => {
     <section className="crew column bg-before">
       <h1 className="crew__title title"><span>02</span>Meet your crew</h1>
 
-      <article className="crew__container column">
+      <article className="crew__container">
         <div className="crew__image">
           {crewItem.map((item)=> {
             return (
@@ -25,7 +25,7 @@ const Crew = () => {
             )
           })}
         </div>
-        <div className="crew__content column">
+        <div className="crew__content">
           <ul className="crew__list row">
           {navList.map((name, index) => {
             return (
@@ -39,7 +39,7 @@ const Crew = () => {
             )}
           )}
           </ul>
-          <div className="crew__information column">
+          <div className="crew__information">
             {crewItem.map((item)=> {
               return(
                 <React.Fragment key={item.name}>
@@ -48,7 +48,7 @@ const Crew = () => {
                   <p className="crew__information--bio">{item.bio}</p>
                 </React.Fragment>
               )
-            })};
+            })}
           </div>
         </div>
       </article>

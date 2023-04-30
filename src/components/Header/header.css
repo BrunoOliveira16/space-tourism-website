@@ -1,5 +1,4 @@
 .header {
-    max-width: 1440px;
     width: 100%;
     padding: 1.5rem;
     position: fixed;
@@ -62,6 +61,7 @@
 
 @media screen and (min-width: 580px) {
     .header {
+        padding-top: 0;
         padding-right: 0;
     }
 
@@ -125,6 +125,7 @@
 
 @media screen and (min-width: 913px) {
     .header {
+        padding-top: 2.5rem;
         padding-left: 3.4375rem;
     }
 

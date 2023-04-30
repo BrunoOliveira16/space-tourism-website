@@ -27,6 +27,7 @@
     --bigger-font-size: 6.25rem;
     --big-font-size: 5rem;
     --largerst-font-size: 3.5rem;
+    --larger-md-font-size: 2.5rem;
     --larger-font-size: 2rem;
     --large-font-size: 1.75rem;
     --medium-sm-font-size: 1.5rem;
@@ -67,7 +68,6 @@
 
 body {
     background-color: var(--bg-primary-color);
-    max-width: 1440px;
     min-width: 360px;
     width: 100%;
     margin: auto;
