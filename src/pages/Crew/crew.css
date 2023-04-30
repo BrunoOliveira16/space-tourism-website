@@ -1,18 +1,93 @@
 .crew {
-    width: 100%;
     height: 100%;
-    padding: 1.5rem;
-    background-image: url(../../assets/crew/background-crew-mobile.jpg);
+    padding: 5.5rem 1.5rem;
+    position: relative;
+    
 }
 
+.crew::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* Define top. bottom, right e left para 0 de uma vez*/
+    z-index: 1;
+    background-image: url(/assets/crew/background-crew-mobile.jpg);
+    opacity: 0.25;
+    mix-blend-mode: screen;
+}
+
+.crew__container {
+    width: 100%;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.crew__image {
+    width: 100%;
+    height: 222px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.crew__image img {
+    width: 177px;
+}
+
+.crew__content {
+    gap: 2rem;
+}
+
+.crew__list {
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.button__circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--text-second-color);
+}
+
+.crew__information {
+    text-align: center;
+}
+
+.crew__information--role {
+    font-size: var(--small-font-size);
+    letter-spacing: var(--small-letter-space);
+    line-height: var(--tiny-line-height);
+    opacity: 0.5;
+    margin-bottom: .5rem;
+}
+
+.crew__information--name {
+    font-size: var(--medium-sm-font-size);
+    margin-bottom: 1rem;
+}
+
+.crew__information--role,
+.crew__information--name {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
 @media screen and (min-width: 580px) {
-    .crew {
-        background-image: url(../../assets/crew/background-crew-tablet.jpg);
+    .crew::before {
+        background-image: url(/assets/crew/background-crew-tablet.jpg);
     }
 }
 
 @media screen and (min-width: 913px) {
     .crew {
-        background-image: url(../../assets/crew/background-crew-desktop.jpg);
+        height: 100vh;
+        padding-top: 13.25rem;
+        padding-left: 10.41rem;
+    }
+
+    .crew::before {
+        background-image: url(/assets/crew/background-crew-desktop.jpg);
     }
 }
