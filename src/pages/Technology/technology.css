@@ -1,8 +1,48 @@
 .technology {
     width: 100%;
     height: 100%;
-    padding: 1.5rem;
+    padding: 5.5rem 1.5rem;
     background-image: url(../../assets/technology/background-technology-mobile.jpg);
+}
+
+.technology__conteiner {
+    height: 100%;
+}
+
+.technology__image {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.technology__information {
+    margin-top: 1.625rem;
+    text-align: center;
+}
+
+.technology__information--subtitle,
+.technology__information--title {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.technology__information--subtitle {
+    font-size: var(--tiny-font-size);
+    line-height: var(--tiny-line-height);
+    letter-spacing: var(--medium-sm-letter-space);
+    margin-bottom: 0.5625rem;
+}
+
+.technology__information--title {
+    font-size: var(--medium-sm-font-size);
+    line-height: var(--small-line-height);
+    margin-bottom: 1rem;
+}
+
+.technology__information--text {
+    font-size: var(--smaller-font-size);
+    line-height: var(--smaller-line-height);
+    letter-spacing: var(--smaller-letter-space);
 }
 
 @media screen and (min-width: 580px) {
