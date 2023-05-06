@@ -12,7 +12,7 @@ const List = ({ filterItems }) => {
             {navList.map((name, index) => {
             return (
                 <button 
-                className={active === index ? "active-work" : "button__circle"}
+                className={active === index ? "active__work--crew" : "button__circle"}
                 key={index} 
                 onClick={() => {
                     setActive(index);

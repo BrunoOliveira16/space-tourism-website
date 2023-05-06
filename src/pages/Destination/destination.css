@@ -26,13 +26,23 @@
     gap: 1.6875rem;
 }
 
+.active__work--destination,
 .destination__item {
     font-size: var(--smaller-font-size);
     font-family: var(--second-font-family);
-    color: var(--text-second-color);
     letter-spacing: var(--medium-sm-letter-space);
     background-color: transparent;
-    border: none;
+    padding-bottom: .75rem;
+    transition: all .6s var(--transition);
+}
+
+.active__work--destination {
+    color: var(--text-second-color);
+    border-bottom: 1px solid var(--text-second-color);
+}
+
+.destination__item {
+    color: var(--text-primary-color);
 }
 
 .destination__subtitle {
@@ -65,6 +75,7 @@
     font-weight: 400;
 }
 
+.active__work--destination,
 .destination__item,
 .destination__subtitle,
 .destination__info--title,
@@ -90,6 +101,7 @@
         margin-bottom: 3.3125rem;
     }
 
+    .active__work--destination,
     .destination__item {
         font-size: var(--small-font-size);
         letter-spacing: var(--medium-letter-space);

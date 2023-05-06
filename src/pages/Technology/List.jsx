@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { technology } from '../../data/data.json'
 
 const List = ({ filterItems }) => {
     const navList = [...new Set(technology.map((technologies) => technologies.name))];
+    const [ active, setActive ] = useState(0);
 
     return (
         <nav className="technology__nav row">
@@ -10,20 +12,21 @@ const List = ({ filterItems }) => {
             {navList.map((name, index) => {
             return (
                 <button 
-                className="technology__item" 
+                className={active === index ? "active__work--technology" : "technology__item"} 
                 key={index} 
                 onClick={() => {
-                    filterItems(name)
+                    setActive(index);
+                    filterItems(name);
                 }}
                 >
-                {index}
+                {index + 1}
                 </button>
             )}
             )}
         </ul>
         </nav>
-    )
-}
+    );
+};
 
 List.propTypes = {
     filterItems: PropTypes.func.isRequired

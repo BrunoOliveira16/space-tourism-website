@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import { destinations } from '../../data/data.json';
+import { useState } from 'react';
 
 const List = ({ filterItems }) => {
   const navList = [...new Set(destinations.map((destination) => destination.name))];
+  const [active, setActive] = useState(0);
 
   return (
     <nav className="destination__nav row">
@@ -10,10 +12,11 @@ const List = ({ filterItems }) => {
         {navList.map((name, index) => {
           return (
             <button 
-              className="destination__item" 
+              className={active === index ? "active__work--destination" : "destination__item"} 
               key={index} 
               onClick={() => {
-                filterItems(name)
+                setActive(index);
+                filterItems(name);
               }}
             >
               {name}
@@ -22,8 +25,8 @@ const List = ({ filterItems }) => {
         )}
       </ul>
     </nav>
-  )
-}
+  );
+};
 
 List.propTypes = {
   filterItems: PropTypes.func.isRequired

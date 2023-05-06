@@ -6,7 +6,7 @@ import Close from '/assets/shared/icon-close.svg';
 import { links } from '../../data/data.json';
 
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     const [ showMenu, setShowMenu ] = useState(false);
@@ -14,6 +14,7 @@ const Header = () => {
     return (
         <header className='header row'>
             <img src={Logo} alt="logo do site" className='header__logo' />
+            
 
             <span className='header__line'></span>
 
@@ -27,8 +28,7 @@ const Header = () => {
                         {links.map(({name, path, position}, index) => {
                             return (
                                 <li className='nav__item' key={index}>
-                                    <span>{position}</span>
-                                    <NavLink to={path}>{name}</NavLink>
+                                    <NavLink to={path}><span>{position}</span>{name}</NavLink>
                                 </li>
                             )
                         })}
