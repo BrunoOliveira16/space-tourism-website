@@ -19,7 +19,7 @@
 <br>
 
 ## 📌 Resumo do Projeto
-O projeto trata-se de uma SPA de turismo espacial, com multiplas opções de navegação para diferentes tópicos do tema principal da página.
+Um site incrível sobre turismo espacial feito com React e hospedado no Netlify. Design moderno e responsivo, com informações interessantes sobre destinos, tripulação e tecnologia espacial.
 
 <br>
 
@@ -37,16 +37,29 @@ npm run dev
 
 ## ⭐ Features
 
-🚧 seção em construção 🚧
+- Site sobre turismo espacial, tema inovador e atraente.
+
+- Quatro páginas principais: Home, Destination, Crew e Technology, com informações sobre o turismo espacial.
+
+- Design moderno e elegante, seguindo o modelo do desafio do Frontend Mentor. Cores escuras e contrastantes, fontes estilizadas e imagens de alta qualidade.
+
+- Site responsivo e adaptável a diferentes tamanhos de tela. Menu hamburguer para navegação em telas menores.
+
+- Site feito com React, framework popular e poderoso para interfaces de usuário. Componentes reutilizáveis, hooks e rotas para organizar o código e melhorar a experiência do usuário.
+
+- Site hospedado no Netlify, plataforma de hospedagem gratuita e fácil de usar para sites estáticos.
 
 <br>
 
 ## 📂 Temas abordados
-- SPA (single page application)
-- Use State React
-- Layout Responsivo (mobile-first)
-- Consumo de dados json
-- React router
+- React
+- Rotas
+- SPA
+- Componentes
+- Hooks
+- CSS
+- Media queries
+- Responsividade
 
 <br>
 
