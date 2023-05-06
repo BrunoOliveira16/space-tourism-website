@@ -1,23 +1,43 @@
 import './technology.css';
-import ImagemLandscape from '/public/assets/technology/image-launch-vehicle-landscape.jpg'
-import ImagemPortrait from '/public/assets/technology/image-launch-vehicle-portrait.jpg'
+import React, { useState } from 'react';
+import { List } from './List';
+import { technology } from '../../data/data.json';
 
 const Technology = () => {
+  const [ technologyItem, setTechnologyItem ] = useState(technology.filter((item) => item.name === "Launch vehicle"));
+
+  const filterItems = (name) => {
+    const newTechnologyItem = technology.filter((item) => item.name === name);
+    setTechnologyItem(newTechnologyItem)
+  }
+
   return (
     <section className="technology column bg">
-      <h1 className="destination__title title"><span>03</span>SPACE LAUNCH 101</h1>
+      <h1 className="technology__title title"><span>03</span>SPACE LAUNCH 101</h1>
       <div className="technology__conteiner column">
         <picture className="technology__image">
-          <source media="(min-width: 768px)" srcSet={ImagemPortrait} />
-          <img src={ImagemLandscape} alt="imagem" />
+          {technologyItem.map((item, index) => {
+            return (
+              <React.Fragment key={index}>
+                <source media="(min-width: 769px)" srcSet={item.images.portrait} />
+                <img src={item.images.landscape} alt={item.name} />
+              </React.Fragment>
+            )
+          })}
         </picture>
 
+        <List filterItems={filterItems} />
+
         <div className="technology__information">
-          <p className="technology__information--subtitle">THE TERMINOLOGY…</p>
-          <h1 className="technology__information--title">LAUNCH VEHICLE</h1>
-          <p className="technology__information--text">
-            A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earths surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it quite an awe-inspiring sight on the launch pad!
-          </p>
+          {technologyItem.map((item, index) => {
+            return (
+              <React.Fragment key={index}>
+                <p className="technology__information--subtitle">THE TERMINOLOGY…</p>
+                <h1 className="technology__information--title">{item.name}</h1>
+                <p className="technology__information--text">{item.description}</p>
+              </React.Fragment>
+            )
+          })}
         </div>
       </div>
     </section>
