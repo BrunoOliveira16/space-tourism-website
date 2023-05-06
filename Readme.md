@@ -30,7 +30,7 @@ npm install
 ```
 Após a instalação do projeto, execute o comando abaixo para inicializar o projeto:
 ```
-npm start
+npm run dev
 ```
 
 <br>
