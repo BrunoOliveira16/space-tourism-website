@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { crew } from '../../data/data.json'
+import { List } from './List'
 import './crew.css'
 
 const Crew = () => {
   const [ crewItem, setCrewItem ] = useState(crew.filter((item) => item.name === "Douglas Hurley"));
-  const navList = [...new Set(crew.map((crews) => crews.name))]
 
   const filterItems = (name) => {
     const newCrewItem = crew.filter((item) => item.name === name);
@@ -26,19 +26,7 @@ const Crew = () => {
           })}
         </div>
         <div className="crew__content">
-          <ul className="crew__list row">
-          {navList.map((name, index) => {
-            return (
-              <button 
-                className="button__circle" 
-                key={index} 
-                onClick={() => {
-                  filterItems(name)
-                }}
-              ></button>
-            )}
-          )}
-          </ul>
+          <List filterItems={filterItems} />
           <div className="crew__information">
             {crewItem.map((item)=> {
               return(
